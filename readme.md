@@ -1,0 +1,4 @@
+This Repo here holds all sorts of MacOS Scripts and Agents I have written of the years to solve issues either for myself or for people that I have worked with. Everything here is as is and there is going to be limited support. How ever Im nice so if there is a glaring issue or passing comment please leave a Pull request as a comment and Ill take a look at it and get back to you when i get the chance to. Further more some of the stuff in here is rather custom and some will use Jamf Pro in their deployments so that might hold part of the Answer. I will help as much as I can. 
+
+
+Be Kind to each other its a mean enough world

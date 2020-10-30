@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.activity_hound.plist</string>
+	<key>Nice</key>
+	<integer>20</integer>
+	<key>ProgramArguments</key>
+	<array>
+	<string>/Library/Application Support/JAMF/activity_hound.sh</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Library/Application Support/JAMF</string>
+	<key>SessionCreate</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StartInterval</key>
+	<integer>30</integer>
+	<key>StandardErrorPath</key>
+	<string>/tmp/activity_hound.log</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/activity_hound.log</string>
+</dict>
+</plist>

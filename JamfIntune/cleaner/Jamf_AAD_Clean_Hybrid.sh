@@ -14,15 +14,15 @@ companyportal ()
 	curl -k -L https://go.microsoft.com/fwlink/?linkid=862280 --output /Users/Shared/intune.pkg
 	cd /Users/Shared
 	sudo installer -pkg /Users/Shared/intune.pkg -target /
-	
-	#clean up 
+
+	#clean up
 	sudo rm -rf /Users/Shared/intune.pkg
 }
 ###
 ###Script Start###
 killall 'JAMF'
 echo "quit JAMF"
-killall 'Company Portal' 
+killall 'Company Portal'
 echo "quit Company Portal"
 echo "Remove Company Portal"
 
@@ -30,11 +30,11 @@ echo "Remove Company Portal"
 rm -rf '/Users/${currentuser}/Applications/Company Portal.app/'
 rm -rf '/Users/${currentuser}/Library/Application Support/com.microsoft.CompanyPortal.usercontext.info'
 rm -rf '/Users/${currentuser}/Library/Application Support/com.jamfsoftware.selfservice.mac'
-rm -rf '/Users/${currentuser}/Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState' 
-rm -rf '/Users/${currentuser}/Library/Saved Application State/com.microsoft.CompanyPortal.savedState' 
+rm -rf '/Users/${currentuser}/Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState'
+rm -rf '/Users/${currentuser}/Library/Saved Application State/com.microsoft.CompanyPortal.savedState'
 rm -rf '/Users/${currentuser}/Library/Preferences/com.microsoft.CompanyPortal.plist'
-rm -rf '/Users/${currentuser}/Library/Preferences/com.jamfsoftware.management.jamfAAD.plist' 
-rm -rf '/Users/${currentuser}/Library/Cookies/com.microsoft.CompanyPortal.binarycookies' 
+rm -rf '/Users/${currentuser}/Library/Preferences/com.jamfsoftware.management.jamfAAD.plist'
+rm -rf '/Users/${currentuser}/Library/Cookies/com.microsoft.CompanyPortal.binarycookies'
 rm -rf '/Users/${currentuser}/Library/Cookes/com.jamf.management.jamfAAD.binarycookies'
 
 echo "Remove keychain password items local key chain"
@@ -52,8 +52,8 @@ echo "Remove keychain password items local key chain"
 /usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -l 'https://device.login.microsoftonline.com/' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db"
 /usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -l 'https://enterpriseregistration.windows.net' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db"
 /usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -l 'https://enterpriseregistration.windows.net/' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db"
-/usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -a 'com.microsoft.workplacejoin.thumbprint' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db" 
-/usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -a 'com.microsoft.workplacejoin.registeredUserPrincipalName' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db" 
+/usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -a 'com.microsoft.workplacejoin.thumbprint' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db"
+/usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -a 'com.microsoft.workplacejoin.registeredUserPrincipalName' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db"
 
 #Clean ADFS objects
 /usr/bin/sudo -iu ${currentuser} /usr/bin/security delete-generic-password -l 'https://${adfsurl}/adfs/ls' keychain "/Users/${currentuser}/Library/Keychains/login.keychain-db"

@@ -22,15 +22,15 @@ echo "quit Company Portal"
 echo "Remove Company Portal"
 
 #Remove all parts of company portal
-rm -r -rf '/Users/${currentuser}/Applications/Company Portal.app/'
+rm -rf '/Applications/Company Portal.app/'
 rm -rf '/Users/${currentuser}/Library/Application Support/com.microsoft.CompanyPortal.usercontext.info'
 rm -rf '/Users/${currentuser}/Library/Application Support/com.jamfsoftware.selfservice.mac'
-rm -r '/Users/${currentuser}/Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState' 
-rm -r '/Users/${currentuser}/Library/Saved Application State/com.microsoft.CompanyPortal.savedState' 
-rm -r '/Users/${currentuser}/Library/Preferences/com.microsoft.CompanyPortal.plist'
-rm -r '/Users/${currentuser}/Library/Preferences/com.jamfsoftware.management.jamfAAD.plist' 
-rm -r '/Users/${currentuser}/Library/Cookies/com.microsoft.CompanyPortal.binarycookies' 
-rm -r '/Users/${currentuser}/Library/Cookes/com.jamf.management.jamfAAD.binarycookies'
+rm -rf '/Users/${currentuser}/Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState' 
+rm -rf '/Users/${currentuser}/Library/Saved Application State/com.microsoft.CompanyPortal.savedState' 
+rm -rf '/Users/${currentuser}/Library/Preferences/com.microsoft.CompanyPortal.plist'
+rm -rf '/Users/${currentuser}/Library/Preferences/com.jamfsoftware.management.jamfAAD.plist' 
+rm -rf '/Users/${currentuser}/Library/Cookies/com.microsoft.CompanyPortal.binarycookies' 
+rm -rf '/Users/${currentuser}/Library/Cookes/com.jamf.management.jamfAAD.binarycookies'
 
 echo "Remove keychain password items local key chain"
 #Clean Items left by Company Portal
